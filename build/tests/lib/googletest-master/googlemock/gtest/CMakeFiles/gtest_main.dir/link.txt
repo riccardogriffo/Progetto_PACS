@@ -1,0 +1,2 @@
+/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/ar qc libgtest_main.a  CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/ranlib libgtest_main.a

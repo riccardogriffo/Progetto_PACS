@@ -1,0 +1,3 @@
+/home/riccardo/Desktop/codice pacs/build2/CMakeFiles/rebuild_cache.dir
+/home/riccardo/Desktop/codice pacs/build2/CMakeFiles/pacs.dir
+/home/riccardo/Desktop/codice pacs/build2/CMakeFiles/edit_cache.dir

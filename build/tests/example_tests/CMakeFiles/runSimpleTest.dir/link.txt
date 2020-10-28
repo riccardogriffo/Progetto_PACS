@@ -1,0 +1,1 @@
+/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  -O2   CMakeFiles/runSimpleTest.dir/SimpleTest.cpp.o  -o runSimpleTest  ../lib/googletest-master/googlemock/gtest/libgtest.a ../lib/googletest-master/googlemock/gtest/libgtest_main.a ../lib/googletest-master/googlemock/gtest/libgtest.a -pthread 

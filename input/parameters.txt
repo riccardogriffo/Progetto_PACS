@@ -1,0 +1,11 @@
+domainX_start 0.
+domainX_end 1.
+domainY_start 0.
+domainY_end 1.
+nX 40
+nY 40
+maxDegree 5
+uniformLocalDegree 1
+diffCoeff 1.
+gamma 10.
+tau 1.
