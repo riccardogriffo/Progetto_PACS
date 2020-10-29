@@ -1,15 +1,15 @@
+//
+// Created by Alberto Chiappa on 24/01/18.
+//
 
-
-
-#ifndef PACS_PELI_CHIAPPA_ADVECTIONDIFFUSIONROBLEM_H
-#define PACS_PELI_CHIAPPA_ADVECTIONDIFFUSIONPROBLEM_H
+#ifndef PACS_PELI_CHIAPPA_LAPLACEPROBLEM_H
+#define PACS_PELI_CHIAPPA_LAPLACEPROBLEM_H
 
 
 #include <iostream>
 #include "../domain/FeSpace.h"
 #include "../domain/QuadMesh.h"
 #include "SystemMatrix.h"
-#include "../operators/AdvectionOperator.h"
 #include "../operators/DiffusionOperator.h"
 #include "../operators/InteriorPenalityOperator.h"
 #include "../operators/StabilizerOperator.h"
@@ -21,22 +21,21 @@
 #include "../utilities/Error.h"
 #include <fstream>
 
-class AdvectionDiffusionProblem {
+class LaplaceProblem {
 private:
     FeSpace fespace;
     double gamma;
     double tau;
     double diffCoeff;
-    double advCoeff;
     Eigen::VectorXd solutionCoeff;
     std::function<double (double, double)> f;
     bool solved;
 public:
-    AdvectionDiffusionProblem(FeSpace fespace, double gamma, double tau, double diffCoeff, double advCoeff,
+    LaplaceProblem(FeSpace fespace, double gamma, double tau, double diffCoeff,
                    std::function<double (double, double)> f);
 
 
-    AdvectionDiffusionProblem(std::string fileName, std::function<double (double, double)> f);
+    LaplaceProblem(std::string fileName, std::function<double (double, double)> f);
     void solve();
 
     void printOnScreen();
@@ -49,4 +48,4 @@ public:
 };
 
 
-#endif //PACS_PELI_CHIAPPA_ADVECTIONDIFFUSIONROBLEM_H
+#endif //PACS_PELI_CHIAPPA_LAPLACEPROBLEM_H

@@ -1,9 +1,7 @@
-//
-// Created by Riccardo on 01/12/2017.
-//
 
-#ifndef PACS_PELI_CHIAPPA_ADVECTIONOPERATOR_H
-#define PACS_PELI_CHIAPPA_ADVECTIONOPERATOR_H
+
+#ifndef PACS_PELI_CHIAPPA_DIFFUSIONOPERATOR_H
+#define PACS_PELI_CHIAPPA_DIFFUSIONOPERATOR_H
 
 #include "Operator.h"
 #include "../utilities/MatrixOperations.h"
@@ -26,4 +24,4 @@ public:
 };
 
 
-#endif //PACS_PELI_CHIAPPA_ADVECTIONOPERATOR_H
+#endif //PACS_PELI_CHIAPPA_DIFFUSIONOPERATOR_H

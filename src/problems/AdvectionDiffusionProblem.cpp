@@ -1,8 +1,6 @@
-//
-// Created by Alberto Chiappa on 24/01/18.
-//
 
-#include "LaplaceProblem.h"
+
+#include "AdvectionDiffusionProblem.h"
 #include "../operators/InteriorPenalityOperator.h"
 
 #define EPS 1e-6
@@ -18,23 +16,28 @@ std::vector<T> linspace(T a, T b, size_t N) {
     return xs;
 }
 
-LaplaceProblem::LaplaceProblem(FeSpace fespace,
+AdvectionDiffusionProblem::AdvectionDiffusionProblem(FeSpace fespace,
                                double gamma,
                                double tau,
                                double diffCoeff,
+                               double advCoeff,
                                std::function<double (double, double)> f): fespace(fespace),
                                                                           gamma(gamma),
                                                                           tau(tau),
                                                                           diffCoeff(diffCoeff),
+                                                                          advCoeff(advCoeff),
                                                                           f(f){
     solved = false;
 }
 
-void LaplaceProblem::solve() {
+void AdvectionDiffusionProblem::solve() {
     SystemMatrix systemMatrix(fespace);
 
-    DiffusionOperator diffusionOperator(fespace, 1.);
+    DiffusionOperator diffusionOperator(fespace, 0.);
     diffusionOperator.updateSystemMatrix(systemMatrix);
+
+    AdvectionOperator advectionOperator(fespace, 10.);
+    advectionOperator.updateSystemMatrix(systemMatrix);
 
     InteriorPenalityOperator interiorPenality(fespace);
     interiorPenality.updateSystemMatrix(systemMatrix);
@@ -59,7 +62,7 @@ void LaplaceProblem::solve() {
     solved = true;
 }
 
-void LaplaceProblem::printOnScreen() {
+void AdvectionDiffusionProblem::printOnScreen() {
     quadMesh mesh = fespace.getMesh();
     std::pair<double, double> xDomain = mesh.getDomainX();
     std::pair<double, double> yDomain = mesh.getDomainY();
@@ -73,14 +76,14 @@ void LaplaceProblem::printOnScreen() {
 
 }
 
-double LaplaceProblem::compareWithExactSolution(std::function<double(double, double)> exactSolution) {
+double AdvectionDiffusionProblem::compareWithExactSolution(std::function<double(double, double)> exactSolution) {
     Error error (exactSolution, solutionCoeff);
     double l2error = error.computeL2Error(fespace);
     std::cout<< "L2 error: " << l2error << std::endl;
     return l2error;
 }
 
-void LaplaceProblem::printOnFile(std::string fileName) {
+void AdvectionDiffusionProblem::printOnFile(std::string fileName) {
     quadMesh mesh = fespace.getMesh();
     std::pair<double, double> xDomain = mesh.getDomainX();
     std::pair<double, double> yDomain = mesh.getDomainY();
@@ -95,6 +98,7 @@ void LaplaceProblem::printOnFile(std::string fileName) {
 
     unsigned int numCols = numPoints;
 
+    /*
     std::ofstream file("../output/" + fileName + ".txt");
     file << numCols << " ";
     for (int i = 0; i < numPoints; ++i) {
@@ -114,26 +118,27 @@ void LaplaceProblem::printOnFile(std::string fileName) {
     file << std::endl;
 
     file.close();
-    
-    std::ofstream file2("../output/" + fileName + "_ric.txt");
+    */
+
+    std::ofstream file2("../output/" + fileName + ".dat");
     //file << numCols << " ";
     for (int k = 0; k < numPoints; ++k) {
     for (int i = 0; i < numPoints; ++i) {
         file2 << xCoord[k] << " ";
         file2 << yCoord[i] << " ";
-        
+
             file2 << evaluation(k, i) << " ";
-        
+
         file2 << std::endl;
     }}
     file2 << std::endl;
 
     file2.close();
-    
-    
+
+
 }
 
-LaplaceProblem::LaplaceProblem(std::string fileName,std::function<double (double, double)> f):
+AdvectionDiffusionProblem::AdvectionDiffusionProblem(std::string fileName,std::function<double (double, double)> f):
     f(f)
     {
     std::vector<double> parameters;
@@ -151,6 +156,7 @@ LaplaceProblem::LaplaceProblem(std::string fileName,std::function<double (double
     int maxDegree = static_cast<int>(parameters[6]);
     int localDegree =static_cast<int>(parameters[7]);
     diffCoeff = parameters[8];
+    advCoeff = parameters[11];
     gamma = parameters[9];
     tau = parameters[10];
 
@@ -160,11 +166,9 @@ LaplaceProblem::LaplaceProblem(std::string fileName,std::function<double (double
     solved =false;
 }
 
-double LaplaceProblem::computeEnergyError(std::function<double(double, double)> exactSolution) {
+double AdvectionDiffusionProblem::computeEnergyError(std::function<double(double, double)> exactSolution) {
     Error error (exactSolution, solutionCoeff);
     double energyError = error.computeEnergyError(fespace, gamma);
     std::cout<< "Energy error: " << energyError << std::endl;
     return energyError;
 }
-
-

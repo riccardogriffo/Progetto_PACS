@@ -70,6 +70,20 @@ QuadElement.h
 FeSpaceElement.h
 /home/riccardo/Desktop/codice pacs/src/domain/FeSpaceElement.h
 
+/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.h
+Operator.h
+/home/riccardo/Desktop/codice pacs/src/operators/Operator.h
+../utilities/MatrixOperations.h
+/home/riccardo/Desktop/codice pacs/src/utilities/MatrixOperations.h
+../basis/GradientHierarchicalBasis.h
+/home/riccardo/Desktop/codice pacs/src/basis/GradientHierarchicalBasis.h
+IntegralMatrix1D.h
+/home/riccardo/Desktop/codice pacs/src/operators/IntegralMatrix1D.h
+../domain/FeSpace.h
+/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
+../problems/SystemMatrix.h
+/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
+
 /home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.h
 Operator.h
 /home/riccardo/Desktop/codice pacs/src/operators/Operator.h
@@ -156,13 +170,13 @@ IntegralMatrix1D.h
 ../problems/SystemMatrix.h
 /home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
 
-/home/riccardo/Desktop/codice pacs/src/problems/LaplaceProblem.cpp
-LaplaceProblem.h
-/home/riccardo/Desktop/codice pacs/src/problems/LaplaceProblem.h
+/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.cpp
+AdvectionDiffusionProblem.h
+/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.h
 ../operators/InteriorPenalityOperator.h
 /home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalityOperator.h
 
-/home/riccardo/Desktop/codice pacs/src/problems/LaplaceProblem.h
+/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.h
 iostream
 -
 ../domain/FeSpace.h
@@ -171,6 +185,8 @@ iostream
 /home/riccardo/Desktop/codice pacs/src/domain/QuadMesh.h
 SystemMatrix.h
 /home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
+../operators/AdvectionOperator.h
+/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.h
 ../operators/DiffusionOperator.h
 /home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.h
 ../operators/InteriorPenalityOperator.h

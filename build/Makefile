@@ -447,6 +447,33 @@ src/domain/QuadMesh.cpp.s:
 	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/domain/QuadMesh.cpp.s
 .PHONY : src/domain/QuadMesh.cpp.s
 
+src/operators/AdvectionOperator.o: src/operators/AdvectionOperator.cpp.o
+
+.PHONY : src/operators/AdvectionOperator.o
+
+# target to build an object file
+src/operators/AdvectionOperator.cpp.o:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o
+.PHONY : src/operators/AdvectionOperator.cpp.o
+
+src/operators/AdvectionOperator.i: src/operators/AdvectionOperator.cpp.i
+
+.PHONY : src/operators/AdvectionOperator.i
+
+# target to preprocess a source file
+src/operators/AdvectionOperator.cpp.i:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.i
+.PHONY : src/operators/AdvectionOperator.cpp.i
+
+src/operators/AdvectionOperator.s: src/operators/AdvectionOperator.cpp.s
+
+.PHONY : src/operators/AdvectionOperator.s
+
+# target to generate assembly for a file
+src/operators/AdvectionOperator.cpp.s:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.s
+.PHONY : src/operators/AdvectionOperator.cpp.s
+
 src/operators/DiffusionOperator.o: src/operators/DiffusionOperator.cpp.o
 
 .PHONY : src/operators/DiffusionOperator.o
@@ -662,6 +689,33 @@ src/operators/StabilizerOperator.s: src/operators/StabilizerOperator.cpp.s
 src/operators/StabilizerOperator.cpp.s:
 	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.s
 .PHONY : src/operators/StabilizerOperator.cpp.s
+
+src/problems/AdvectionDiffusionProblem.o: src/problems/AdvectionDiffusionProblem.cpp.o
+
+.PHONY : src/problems/AdvectionDiffusionProblem.o
+
+# target to build an object file
+src/problems/AdvectionDiffusionProblem.cpp.o:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o
+.PHONY : src/problems/AdvectionDiffusionProblem.cpp.o
+
+src/problems/AdvectionDiffusionProblem.i: src/problems/AdvectionDiffusionProblem.cpp.i
+
+.PHONY : src/problems/AdvectionDiffusionProblem.i
+
+# target to preprocess a source file
+src/problems/AdvectionDiffusionProblem.cpp.i:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.i
+.PHONY : src/problems/AdvectionDiffusionProblem.cpp.i
+
+src/problems/AdvectionDiffusionProblem.s: src/problems/AdvectionDiffusionProblem.cpp.s
+
+.PHONY : src/problems/AdvectionDiffusionProblem.s
+
+# target to generate assembly for a file
+src/problems/AdvectionDiffusionProblem.cpp.s:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.s
+.PHONY : src/problems/AdvectionDiffusionProblem.cpp.s
 
 src/problems/LaplaceProblem.o: src/problems/LaplaceProblem.cpp.o
 
@@ -897,6 +951,9 @@ help:
 	@echo "... src/domain/QuadMesh.o"
 	@echo "... src/domain/QuadMesh.i"
 	@echo "... src/domain/QuadMesh.s"
+	@echo "... src/operators/AdvectionOperator.o"
+	@echo "... src/operators/AdvectionOperator.i"
+	@echo "... src/operators/AdvectionOperator.s"
 	@echo "... src/operators/DiffusionOperator.o"
 	@echo "... src/operators/DiffusionOperator.i"
 	@echo "... src/operators/DiffusionOperator.s"
@@ -921,6 +978,9 @@ help:
 	@echo "... src/operators/StabilizerOperator.o"
 	@echo "... src/operators/StabilizerOperator.i"
 	@echo "... src/operators/StabilizerOperator.s"
+	@echo "... src/problems/AdvectionDiffusionProblem.o"
+	@echo "... src/problems/AdvectionDiffusionProblem.i"
+	@echo "... src/problems/AdvectionDiffusionProblem.s"
 	@echo "... src/problems/LaplaceProblem.o"
 	@echo "... src/problems/LaplaceProblem.i"
 	@echo "... src/problems/LaplaceProblem.s"

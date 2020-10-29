@@ -2,7 +2,8 @@
 #include <Eigen/Dense>
 #include "src/domain/QuadMesh.h"
 #include "src/domain/FeSpace.h"
-#include "src/problems/LaplaceProblem.h"
+// #include "src/problems/LaplaceProblem.h"
+#include "src/problems/AdvectionDiffusionProblem.h"
 #include <math.h>
 
 using namespace std;
@@ -24,11 +25,18 @@ double f (double x, double y){
 }
 
 int main() {
-    LaplaceProblem problem("parameters", f);
+    // LaplaceProblem problem("parameters", f);
+    // problem.solve();
+    // problem.printOnFile("test");
+    // problem.compareWithExactSolution(analyticalSolution);
+    // problem.computeEnergyError(analyticalSolution);
+
+
+    AdvectionDiffusionProblem problem("parameters", f);
     problem.solve();
-    problem.printOnFile("test");
-    problem.compareWithExactSolution(analyticalSolution);
-    problem.computeEnergyError(analyticalSolution);
+    problem.printOnFile("test_AdvectionDiffusion");
+    //problem.compareWithExactSolution(analyticalSolution);
+    //problem.computeEnergyError(analyticalSolution);
 
     return 0;
 }

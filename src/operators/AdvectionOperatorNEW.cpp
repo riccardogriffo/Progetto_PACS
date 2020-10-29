@@ -42,5 +42,3 @@ void AdvectionOperator::updateSystemMatrix(SystemMatrix &systemMatrix) {
         Eigen::MatrixXd localAdvection = computeLocalMatrix(elem);
         systemMatrix.addBlock(localAdvection, curElemIdx, curElemIdx);
         ++curElemIdx;
-    }
-}

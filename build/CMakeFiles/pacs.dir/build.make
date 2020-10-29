@@ -291,9 +291,22 @@ CMakeFiles/pacs.dir/src/operators/DiffusionOperator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pacs.dir/src/operators/DiffusionOperator.cpp.s"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.cpp" -o CMakeFiles/pacs.dir/src/operators/DiffusionOperator.cpp.s
 
+CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o: CMakeFiles/pacs.dir/flags.make
+CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o: ../src/operators/AdvectionOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.cpp"
+
+CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.i"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.cpp" > CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.i
+
+CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.s"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.cpp" -o CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.s
+
 CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o: ../src/operators/ReactionOperator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/ReactionOperator.cpp"
 
 CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.i: cmake_force
@@ -306,7 +319,7 @@ CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o: ../src/operators/RightHandSideFunction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/RightHandSideFunction.cpp"
 
 CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.i: cmake_force
@@ -319,7 +332,7 @@ CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o: ../src/operators/StabilizerOperator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.cpp"
 
 CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.i: cmake_force
@@ -332,7 +345,7 @@ CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o: ../src/problems/SystemMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.cpp"
 
 CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.i: cmake_force
@@ -345,7 +358,7 @@ CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.o: ../src/utilities/SolutionEvaluation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/utilities/SolutionEvaluation.cpp"
 
 CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.i: cmake_force
@@ -358,7 +371,7 @@ CMakeFiles/pacs.dir/src/utilities/SolutionEvaluation.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/utilities/Error.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/utilities/Error.cpp.o: ../src/utilities/Error.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/pacs.dir/src/utilities/Error.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/pacs.dir/src/utilities/Error.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/utilities/Error.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/utilities/Error.cpp"
 
 CMakeFiles/pacs.dir/src/utilities/Error.cpp.i: cmake_force
@@ -371,7 +384,7 @@ CMakeFiles/pacs.dir/src/utilities/Error.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o: ../src/operators/InteriorPenalityOperator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalityOperator.cpp"
 
 CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.i: cmake_force
@@ -384,7 +397,7 @@ CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o: ../src/operators/InteriorPenalitySymmetric.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalitySymmetric.cpp"
 
 CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.i: cmake_force
@@ -397,7 +410,7 @@ CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.s: cmake_force
 
 CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o: CMakeFiles/pacs.dir/flags.make
 CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o: ../src/problems/LaplaceProblem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/problems/LaplaceProblem.cpp"
 
 CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.i: cmake_force
@@ -407,6 +420,19 @@ CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.i: cmake_force
 CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.s"
 	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/riccardo/Desktop/codice pacs/src/problems/LaplaceProblem.cpp" -o CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.s
+
+CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o: CMakeFiles/pacs.dir/flags.make
+CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o: ../src/problems/AdvectionDiffusionProblem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o -c "/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.cpp"
+
+CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.i"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.cpp" > CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.i
+
+CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.s"
+	/u/sw/pkgs/toolchains/gcc-glibc/9/prefix/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.cpp" -o CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.s
 
 # Object files for target pacs
 pacs_OBJECTS = \
@@ -428,6 +454,7 @@ pacs_OBJECTS = \
 "CMakeFiles/pacs.dir/src/operators/Operator.cpp.o" \
 "CMakeFiles/pacs.dir/src/domain/FeSpaceElement.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/DiffusionOperator.cpp.o" \
+"CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o" \
@@ -436,7 +463,8 @@ pacs_OBJECTS = \
 "CMakeFiles/pacs.dir/src/utilities/Error.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o" \
 "CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o" \
-"CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o"
+"CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o" \
+"CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o"
 
 # External object files for target pacs
 pacs_EXTERNAL_OBJECTS =
@@ -459,6 +487,7 @@ pacs: CMakeFiles/pacs.dir/src/utilities/FunctionProjection.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/Operator.cpp.o
 pacs: CMakeFiles/pacs.dir/src/domain/FeSpaceElement.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/DiffusionOperator.cpp.o
+pacs: CMakeFiles/pacs.dir/src/operators/AdvectionOperator.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o
@@ -468,9 +497,10 @@ pacs: CMakeFiles/pacs.dir/src/utilities/Error.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/InteriorPenalityOperator.cpp.o
 pacs: CMakeFiles/pacs.dir/src/operators/InteriorPenalitySymmetric.cpp.o
 pacs: CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o
+pacs: CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o
 pacs: CMakeFiles/pacs.dir/build.make
 pacs: CMakeFiles/pacs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable pacs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/riccardo/Desktop/codice pacs/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable pacs"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pacs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
