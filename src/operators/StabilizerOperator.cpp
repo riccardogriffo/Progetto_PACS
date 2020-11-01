@@ -38,10 +38,20 @@ Eigen::MatrixXd StabilizerOperator::computeLocalMatrix(const FeSpaceElement &feS
         Eigen::VectorXd evalPoint(1);
         evalPoint << feSpaceElement.getDomainY().first;
 
+        int xyz = 0;
+        if (xyz == 0){
+          Eigen::VectorXd prova(2);
+          prova << gamma_ , gamma_ ;
+          xyz = 1;
+          std::cout << prova << std::endl;
+        }
+
+        std::cout << std::endl;
+
         auto evaluationPlus = basisPointerPlus->evaluate(evalPoint);
         auto evaluationMinus = basisPointerMinus->evaluate(evalPoint);
-
         auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
+
 
         currentMatrix = MatrixOperations::tensorProduct(tempMatrix,1/feSpaceElement.getLengthX()*
                 referenceMatrix1D_.topLeftCorner(currentElemXDregree + 1,currentElemXDregree + 1));
@@ -124,6 +134,7 @@ void StabilizerOperator::updateSystemMatrix(SystemMatrix &systemMatrix) {
             if(edge.hasAdjacentElem()){
                 Eigen::MatrixXd currentMatrixUMinus = computeLocalMatrix(fespaceElemVector[i], j,
                                                               fespaceElemVector[edge.getAdjacent()]);
+
                 systemMatrix.addBlock(-currentMatrixUMinus, i, edge.getAdjacent());
                 systemMatrix.addBlock(currentMatrixUPlus, i, i);
             }
@@ -134,6 +145,3 @@ void StabilizerOperator::updateSystemMatrix(SystemMatrix &systemMatrix) {
     }
 
 }
-
-
-

@@ -70,34 +70,6 @@ QuadElement.h
 FeSpaceElement.h
 /home/riccardo/Desktop/codice pacs/src/domain/FeSpaceElement.h
 
-/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.h
-Operator.h
-/home/riccardo/Desktop/codice pacs/src/operators/Operator.h
-../utilities/MatrixOperations.h
-/home/riccardo/Desktop/codice pacs/src/utilities/MatrixOperations.h
-../basis/GradientHierarchicalBasis.h
-/home/riccardo/Desktop/codice pacs/src/basis/GradientHierarchicalBasis.h
-IntegralMatrix1D.h
-/home/riccardo/Desktop/codice pacs/src/operators/IntegralMatrix1D.h
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../problems/SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
-
-/home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.h
-Operator.h
-/home/riccardo/Desktop/codice pacs/src/operators/Operator.h
-../utilities/MatrixOperations.h
-/home/riccardo/Desktop/codice pacs/src/utilities/MatrixOperations.h
-../basis/GradientHierarchicalBasis.h
-/home/riccardo/Desktop/codice pacs/src/basis/GradientHierarchicalBasis.h
-IntegralMatrix1D.h
-/home/riccardo/Desktop/codice pacs/src/operators/IntegralMatrix1D.h
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../problems/SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
-
 /home/riccardo/Desktop/codice pacs/src/operators/IntegralMatrix1D.h
 ../basis/Basis.h
 /home/riccardo/Desktop/codice pacs/src/basis/Basis.h
@@ -109,26 +81,6 @@ utility
 -
 memory
 -
-
-/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalityOperator.h
-Operator.h
-/home/riccardo/Desktop/codice pacs/src/operators/Operator.h
-../utilities/MatrixOperations.h
-/home/riccardo/Desktop/codice pacs/src/utilities/MatrixOperations.h
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../problems/SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
-
-/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalitySymmetric.h
-Operator.h
-/home/riccardo/Desktop/codice pacs/src/operators/Operator.h
-../utilities/MatrixOperations.h
-/home/riccardo/Desktop/codice pacs/src/utilities/MatrixOperations.h
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../problems/SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
 
 /home/riccardo/Desktop/codice pacs/src/operators/Operator.h
 ../basis/Basis.h
@@ -144,13 +96,9 @@ memory
 iostream
 -
 
-/home/riccardo/Desktop/codice pacs/src/operators/RightHandSideFunction.h
-functional
--
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-Eigen/Dense
--
+/home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.cpp
+StabilizerOperator.h
+/home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.h
 
 /home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.h
 Eigen/Dense
@@ -170,44 +118,6 @@ IntegralMatrix1D.h
 ../problems/SystemMatrix.h
 /home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
 
-/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.cpp
-AdvectionDiffusionProblem.h
-/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.h
-../operators/InteriorPenalityOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalityOperator.h
-
-/home/riccardo/Desktop/codice pacs/src/problems/AdvectionDiffusionProblem.h
-iostream
--
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../domain/QuadMesh.h
-/home/riccardo/Desktop/codice pacs/src/domain/QuadMesh.h
-SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
-../operators/AdvectionOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/AdvectionOperator.h
-../operators/DiffusionOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.h
-../operators/InteriorPenalityOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalityOperator.h
-../operators/StabilizerOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.h
-../utilities/SolutionEvaluation.h
-/home/riccardo/Desktop/codice pacs/src/utilities/SolutionEvaluation.h
-../operators/RightHandSideFunction.h
-/home/riccardo/Desktop/codice pacs/src/operators/RightHandSideFunction.h
-../operators/InteriorPenalitySymmetric.h
-/home/riccardo/Desktop/codice pacs/src/operators/InteriorPenalitySymmetric.h
-Eigen/Dense
--
-string
--
-../utilities/Error.h
-/home/riccardo/Desktop/codice pacs/src/utilities/Error.h
-fstream
--
-
 /home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
 Eigen/Sparse
 -
@@ -218,22 +128,6 @@ vector
 ../domain/FeSpace.h
 /home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
 
-/home/riccardo/Desktop/codice pacs/src/utilities/Error.h
-Eigen/Dense
--
-functional
--
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-../operators/RightHandSideFunction.h
-/home/riccardo/Desktop/codice pacs/src/operators/RightHandSideFunction.h
-../problems/SystemMatrix.h
-/home/riccardo/Desktop/codice pacs/src/problems/SystemMatrix.h
-../operators/DiffusionOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/DiffusionOperator.h
-../operators/StabilizerOperator.h
-/home/riccardo/Desktop/codice pacs/src/operators/StabilizerOperator.h
-
 /home/riccardo/Desktop/codice pacs/src/utilities/GaussLobattoQuadrature.h
 Eigen/Dense
 -
@@ -242,14 +136,6 @@ Eigen/Dense
 Eigen/Dense
 -
 stdexcept
--
-
-/home/riccardo/Desktop/codice pacs/src/utilities/SolutionEvaluation.h
-../domain/FeSpace.h
-/home/riccardo/Desktop/codice pacs/src/domain/FeSpace.h
-Eigen/Dense
--
-algorithm
 -
 
 /usr/local/include/eigen3/Eigen/Cholesky

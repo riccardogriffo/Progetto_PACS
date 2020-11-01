@@ -9,4 +9,5 @@ uniformLocalDegree 1
 diffCoeff 0.
 gamma 10.
 tau 2.
-advcoeff 100.
+advCoeffX 1.
+advCoeffY 100. 

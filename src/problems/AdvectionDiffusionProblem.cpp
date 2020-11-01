@@ -20,12 +20,14 @@ AdvectionDiffusionProblem::AdvectionDiffusionProblem(FeSpace fespace,
                                double gamma,
                                double tau,
                                double diffCoeff,
-                               double advCoeff,
+                               double advCoeffX,
+                               double advCoeffY,
                                std::function<double (double, double)> f): fespace(fespace),
                                                                           gamma(gamma),
                                                                           tau(tau),
                                                                           diffCoeff(diffCoeff),
-                                                                          advCoeff(advCoeff),
+                                                                          advCoeffX(advCoeffX),
+                                                                          advCoeffY(advCoeffY),
                                                                           f(f){
     solved = false;
 }
@@ -36,7 +38,7 @@ void AdvectionDiffusionProblem::solve() {
     DiffusionOperator diffusionOperator(fespace, 0.);
     diffusionOperator.updateSystemMatrix(systemMatrix);
 
-    AdvectionOperator advectionOperator(fespace, 10.);
+    AdvectionOperator advectionOperator(fespace, 1., 1.);
     advectionOperator.updateSystemMatrix(systemMatrix);
 
     InteriorPenalityOperator interiorPenality(fespace);
@@ -130,7 +132,9 @@ void AdvectionDiffusionProblem::printOnFile(std::string fileName) {
             file2 << evaluation(k, i) << " ";
 
         file2 << std::endl;
-    }}
+    }
+    file2 << std::endl;
+    }
     file2 << std::endl;
 
     file2.close();
@@ -156,7 +160,8 @@ AdvectionDiffusionProblem::AdvectionDiffusionProblem(std::string fileName,std::f
     int maxDegree = static_cast<int>(parameters[6]);
     int localDegree =static_cast<int>(parameters[7]);
     diffCoeff = parameters[8];
-    advCoeff = parameters[11];
+    advCoeffX = parameters[11];
+    advCoeffY = parameters[12];
     gamma = parameters[9];
     tau = parameters[10];
 

@@ -27,12 +27,13 @@ private:
     double gamma;
     double tau;
     double diffCoeff;
-    double advCoeff;
+    double advCoeffX;
+    double advCoeffY;
     Eigen::VectorXd solutionCoeff;
     std::function<double (double, double)> f;
     bool solved;
 public:
-    AdvectionDiffusionProblem(FeSpace fespace, double gamma, double tau, double diffCoeff, double advCoeff,
+    AdvectionDiffusionProblem(FeSpace fespace, double gamma, double tau, double diffCoeff, double advCoeffX, double AdvCoeffY,
                    std::function<double (double, double)> f);
 
 

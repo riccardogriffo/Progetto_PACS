@@ -15,10 +15,11 @@
 class AdvectionOperator: public Operator {
 private:
     FeSpace fespace_;
-    double advectionCoeff_;
+    double advectionCoeffX_;
+    double advectionCoeffY_;
 public:
 
-    AdvectionOperator(const FeSpace &fespace, double advectionCoeff);
+    AdvectionOperator(const FeSpace &fespace, double advectionCoeffX, double advectionCoeffY);
     void computeReferenceMatrix1D() override;
     Eigen::MatrixXd computeLocalMatrix(FeSpaceElement feSpaceElement) ;
     void updateSystemMatrix(SystemMatrix &systemMatrix);

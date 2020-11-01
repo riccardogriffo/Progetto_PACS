@@ -1,7 +1,8 @@
 #include "AdvectionOperator.h"
 
-AdvectionOperator::AdvectionOperator(const FeSpace &fespace, double advectionCoeff): fespace_(fespace),
-                                                                                     advectionCoeff_(advectionCoeff) {
+AdvectionOperator::AdvectionOperator(const FeSpace &fespace, double advectionCoeffX, double advectionCoeffY): fespace_(fespace),
+                                                                                     advectionCoeffX_(advectionCoeffX),
+                                                                                     advectionCoeffY_(advectionCoeffY) {
     unsigned int maxDegree = fespace.getMaxDegree();
     referenceElement_ = FeSpaceElement(maxDegree, maxDegree, std::make_pair(-1., 1.), std::make_pair(-1., 1.));
     computeReferenceMatrix1D();
@@ -18,7 +19,7 @@ void AdvectionOperator::computeReferenceMatrix1D() {
     );
 
     IntegralMatrix1D matrix(basisPointer_grad,basisPointer);
-    referenceMatrix1D_ = advectionCoeff_*matrix.generate(2*referenceElement_.getDegreeX());
+    referenceMatrix1D_ = matrix.generate(2*referenceElement_.getDegreeX());
 }
 
 Eigen::MatrixXd AdvectionOperator::computeLocalMatrix(FeSpaceElement feSpaceElement) {
@@ -29,8 +30,8 @@ Eigen::MatrixXd AdvectionOperator::computeLocalMatrix(FeSpaceElement feSpaceElem
     Eigen::MatrixXd referenceX = referenceMatrix1D_.topLeftCorner(feSpaceElement.getDegreeX()+1,feSpaceElement.getDegreeX()+1);
     Eigen::MatrixXd referenceY = referenceMatrix1D_.topLeftCorner(feSpaceElement.getDegreeY()+1,feSpaceElement.getDegreeY()+1);
 
-    Eigen::MatrixXd firstAddend = MatrixOperations::tensorProduct(2/(feSpaceElement.getLengthX())*identityY,referenceX);
-    Eigen::MatrixXd secondAddend = MatrixOperations::tensorProduct(2/(feSpaceElement.getLengthY())*referenceY,identityX);
+    Eigen::MatrixXd firstAddend = advectionCoeffX_*MatrixOperations::tensorProduct(2/(feSpaceElement.getLengthX())*identityY,referenceX);
+    Eigen::MatrixXd secondAddend = advectionCoeffY_*MatrixOperations::tensorProduct(2/(feSpaceElement.getLengthY())*referenceY,identityX);
 
     return firstAddend + secondAddend;
 }
