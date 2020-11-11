@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pacs.dir/src/operators/ReactionOperator.cpp.o"
   "CMakeFiles/pacs.dir/src/operators/RightHandSideFunction.cpp.o"
   "CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.o"
+  "CMakeFiles/pacs.dir/src/operators/TransportEdgeOperator.cpp.o"
   "CMakeFiles/pacs.dir/src/problems/AdvectionDiffusionProblem.cpp.o"
   "CMakeFiles/pacs.dir/src/problems/LaplaceProblem.cpp.o"
   "CMakeFiles/pacs.dir/src/problems/SystemMatrix.cpp.o"

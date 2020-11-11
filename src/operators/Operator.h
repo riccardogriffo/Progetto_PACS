@@ -17,11 +17,13 @@ class Operator {
 protected:
     Eigen::MatrixXd referenceMatrix1D_;
     FeSpaceElement referenceElement_;
+    //FeSpace fespace_;
 
 public:
     Operator();
     void setReferenceElement(FeSpaceElement &referenceElement);
     virtual void computeReferenceMatrix1D() = 0;
+    // virtual void updateSystemMatrix(SystemMatrix &systemMatrix)=0;
     //virtual Eigen::MatrixXd computeLocalMatrix(FeSpaceElement feSpaceElement);
 };
 

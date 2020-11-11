@@ -12,6 +12,7 @@
 #include "../operators/AdvectionOperator.h"
 #include "../operators/DiffusionOperator.h"
 #include "../operators/InteriorPenalityOperator.h"
+#include "../operators/TransportEdgeOperator.h"
 #include "../operators/StabilizerOperator.h"
 #include "../utilities/SolutionEvaluation.h"
 #include "../operators/RightHandSideFunction.h"

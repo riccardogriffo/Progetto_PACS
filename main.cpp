@@ -19,9 +19,10 @@ double f (double x, double y){
     //return x*x*y*y;
     //return -2*(y*(y-1.)+x*(x-1.));
     //return x*x*y*y;
-    return exp(3*x)*sin(2*M_PI*y)*(4*M_PI*M_PI*(x-x*x)+9*x*x+3*x-4);
+    // return exp(3*x)*sin(2*M_PI*y)*(4*M_PI*M_PI*(x-x*x)+9*x*x+3*x-4);
+    //return x;
     //return 8*M_PI*M_PI*sin(2*M_PI*x)*sin(2*M_PI*y);
-    //return 1.;
+    return -1.;
 }
 
 int main() {

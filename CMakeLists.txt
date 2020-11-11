@@ -94,6 +94,8 @@ set(SOURCE_FILES main.cpp
                  src/problems/LaplaceProblem.h
                  src/problems/AdvectionDiffusionProblem.cpp
                  src/problems/AdvectionDiffusionProblem.h
+                 src/operators/TransportEdgeOperator.h
+                 src/operators/TransportEdgeOperator.cpp
                  )
 
 add_executable(pacs ${SOURCE_FILES})

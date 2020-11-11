@@ -38,18 +38,11 @@ Eigen::MatrixXd StabilizerOperator::computeLocalMatrix(const FeSpaceElement &feS
         Eigen::VectorXd evalPoint(1);
         evalPoint << feSpaceElement.getDomainY().first;
 
-        int xyz = 0;
-        if (xyz == 0){
-          Eigen::VectorXd prova(2);
-          prova << gamma_ , gamma_ ;
-          xyz = 1;
-          std::cout << prova << std::endl;
-        }
-
-        std::cout << std::endl;
-
         auto evaluationPlus = basisPointerPlus->evaluate(evalPoint);
         auto evaluationMinus = basisPointerMinus->evaluate(evalPoint);
+
+        
+
         auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
 
 
@@ -97,7 +90,9 @@ Eigen::MatrixXd StabilizerOperator::computeLocalMatrix(const FeSpaceElement &feS
                                                   referenceMatrix1D_.topLeftCorner(currentElemYDregree + 1,
                                                                                    currentElemYDregree + 1),
                                                   tempMatrix);
+
     }
+
 
     else if (edgeIndex == 3){
         std::shared_ptr<HierarchicalBasis> basisPointerPlus(

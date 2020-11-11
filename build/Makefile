@@ -690,6 +690,33 @@ src/operators/StabilizerOperator.cpp.s:
 	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/StabilizerOperator.cpp.s
 .PHONY : src/operators/StabilizerOperator.cpp.s
 
+src/operators/TransportEdgeOperator.o: src/operators/TransportEdgeOperator.cpp.o
+
+.PHONY : src/operators/TransportEdgeOperator.o
+
+# target to build an object file
+src/operators/TransportEdgeOperator.cpp.o:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/TransportEdgeOperator.cpp.o
+.PHONY : src/operators/TransportEdgeOperator.cpp.o
+
+src/operators/TransportEdgeOperator.i: src/operators/TransportEdgeOperator.cpp.i
+
+.PHONY : src/operators/TransportEdgeOperator.i
+
+# target to preprocess a source file
+src/operators/TransportEdgeOperator.cpp.i:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/TransportEdgeOperator.cpp.i
+.PHONY : src/operators/TransportEdgeOperator.cpp.i
+
+src/operators/TransportEdgeOperator.s: src/operators/TransportEdgeOperator.cpp.s
+
+.PHONY : src/operators/TransportEdgeOperator.s
+
+# target to generate assembly for a file
+src/operators/TransportEdgeOperator.cpp.s:
+	$(MAKE) -f CMakeFiles/pacs.dir/build.make CMakeFiles/pacs.dir/src/operators/TransportEdgeOperator.cpp.s
+.PHONY : src/operators/TransportEdgeOperator.cpp.s
+
 src/problems/AdvectionDiffusionProblem.o: src/problems/AdvectionDiffusionProblem.cpp.o
 
 .PHONY : src/problems/AdvectionDiffusionProblem.o
@@ -978,6 +1005,9 @@ help:
 	@echo "... src/operators/StabilizerOperator.o"
 	@echo "... src/operators/StabilizerOperator.i"
 	@echo "... src/operators/StabilizerOperator.s"
+	@echo "... src/operators/TransportEdgeOperator.o"
+	@echo "... src/operators/TransportEdgeOperator.i"
+	@echo "... src/operators/TransportEdgeOperator.s"
 	@echo "... src/problems/AdvectionDiffusionProblem.o"
 	@echo "... src/problems/AdvectionDiffusionProblem.i"
 	@echo "... src/problems/AdvectionDiffusionProblem.s"

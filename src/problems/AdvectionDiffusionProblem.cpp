@@ -50,6 +50,9 @@ void AdvectionDiffusionProblem::solve() {
     StabilizerOperator stabilizerOperator(fespace, gamma);
     stabilizerOperator.updateSystemMatrix(systemMatrix);
 
+    TransportEdgeOperator transportEdgeOperator(fespace, 1., 1.);
+    transportEdgeOperator.updateSystemMatrix(systemMatrix);
+
     systemMatrix.buildSparseMatrix();
     //std::cout<<matrix<<std::endl;
     RightHandSideFunction fProj (fespace, f, 10);

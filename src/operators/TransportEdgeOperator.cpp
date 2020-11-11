@@ -30,7 +30,7 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
                 new HierarchicalBasis(currentElemYDregree + 1, feSpaceElement.getDomainY())
         );
         std::shared_ptr<HierarchicalBasis> basisPointerMinus(
-                new HierarchicalBasis(currentElemYDregree + 1, feSpaceElement.getDomainY())
+                new HierarchicalBasis(adjElemYDregree + 1, feSpaceElement.getDomainY())
         );
 
         Eigen::VectorXd evalPoint(1);
@@ -41,7 +41,7 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
         // auto evaluationMinus = basisPointerMinus->evaluate(evalPoint);
         // auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
 
-        // calcolo il prodotto scalare nell'integrale  
+        // calcolo il prodotto scalare nell'integrale
         // currentMatrix = MatrixOperations::tensorProduct(tempMatrix,
         //        referenceMatrix1D_.topLeftCorner(currentElemXDregree + 1,currentElemXDregree + 1));
 
@@ -55,12 +55,8 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
         // Qui si puo fare la versione che richiama un qualsiasi flusso numerico
         // Implemento ora Lax-Friedrics con beta costante (advectionCoeffX_, advectionCoeffY_)
 
-        Eigen::VectorXd advectionCoeff(2);
-        advectionCoeff << advectionCoeffX_, advectionCoeffY_;
-
-
-        // currentMatrix = MatrixOperations::tensorProduct(tempMatrix,
-        //                                tensorProduct(advectionCoeff,referenceMatrix1D_.topLeftCorner(currentElemXDregree + 1)))
+        currentMatrix = -0.5*advectionCoeffX_ * MatrixOperations::tensorProduct(tempMatrix,1/feSpaceElement.getLengthX()*
+                referenceMatrix1D_.topLeftCorner(currentElemXDregree + 1,currentElemXDregree + 1));
 
     }
 
@@ -80,7 +76,7 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
         auto evaluationMinus=basisPointerMinus->evaluate(evalPoint);
 
         auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
-        currentMatrix = MatrixOperations::tensorProduct(tempMatrix,1/feSpaceElement.getLengthX()*
+        currentMatrix = 0.5*advectionCoeffX_ * MatrixOperations::tensorProduct(tempMatrix,1/feSpaceElement.getLengthX()*
                 referenceMatrix1D_.topLeftCorner(currentElemXDregree + 1,currentElemXDregree + 1));
     }
 
@@ -97,12 +93,12 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
         evalPoint<<feSpaceElement.getDomainX().second;
 
         // valuto il jump della funzione test
-        //auto evaluationPlus=basisPointerPlus->evaluate(evalPoint);
-        //auto evaluationMinus=basisPointerMinus->evaluate(evalPoint);
-        //auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
+        auto evaluationPlus=basisPointerPlus->evaluate(evalPoint);
+        auto evaluationMinus=basisPointerMinus->evaluate(evalPoint);
+        auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
 
 
-        currentMatrix = MatrixOperations::tensorProduct(1/feSpaceElement.getLengthY()*
+        currentMatrix = -0.5*advectionCoeffY_ *MatrixOperations::tensorProduct(1/feSpaceElement.getLengthY()*
                                                   referenceMatrix1D_.topLeftCorner(currentElemYDregree + 1,
                                                                                    currentElemYDregree + 1),
                                                   tempMatrix);
@@ -124,7 +120,7 @@ Eigen::MatrixXd TransportEdgeOperator::computeLocalMatrix(const FeSpaceElement &
         auto evaluationMinus=basisPointerMinus->evaluate(evalPoint);
 
         auto tempMatrix = MatrixOperations::tensorProduct(evaluationPlus.transpose(), evaluationMinus);
-        currentMatrix = MatrixOperations::tensorProduct(1/feSpaceElement.getLengthY()*
+        currentMatrix = 0.5*advectionCoeffY_ *MatrixOperations::tensorProduct(1/feSpaceElement.getLengthY()*
                                                   referenceMatrix1D_.topLeftCorner(currentElemYDregree + 1,
                                                                                    currentElemYDregree + 1),
                                                   tempMatrix);

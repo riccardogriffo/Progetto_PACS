@@ -1,0 +1,5 @@
+set surface 
+set hidden3d 
+set pm3d 
+set palette rgbformulae 33,13,10
+splot "test_AdvectionDiffusion.dat" u 1:2:3 with lines

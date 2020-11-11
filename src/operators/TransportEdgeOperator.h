@@ -29,3 +29,6 @@ public:
 
     void updateSystemMatrix(SystemMatrix &systemMatrix);
 };
+
+
+#endif //PACS_PELI_CHIAPPA_TRANSPORTEDGEOPERATOR_H
